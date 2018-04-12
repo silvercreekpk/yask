@@ -134,6 +134,10 @@ else ifneq ($(findstring fsg,$(stencil)),)
   pfd_l1		=	0
   pfd_l2		=	2
  endif
+ ifeq ($(arch),skl)
+  def_thread_divisor    =      2
+  def_block_threads     =      1
+ endif
 
 else ifeq ($(stencil),stream)
  MACROS		+=	MAX_EXCH_DIST=0
