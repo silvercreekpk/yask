@@ -334,7 +334,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the solution step dimension. </p>
-<dl class="section return"><dt>Returns</dt><dd>String containing the step-dimension name. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>String containing the step-dimension name that was defined by <a class="el" href="classyask_1_1yc__node__factory.html#a5c92535a08258803f35bdacb31fc4682" title="Create a step-index node. ">yc_node_factory::new_step_index()</a> and used in one or more grids. </dd></dl>
 
 </div>
 </div>
@@ -386,7 +386,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get all the domain dimension names. </p>
-<dl class="section return"><dt>Returns</dt><dd>List of all domain-dimension names. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>List of all domain-dimension names that were defined by <a class="el" href="classyask_1_1yc__node__factory.html#a7c47726eb7de2b9cd174cfcff7745699" title="Create a domain-index node. ">yc_node_factory::new_domain_index()</a> and used in one or more grids. </dd></dl>
 
 </div>
 </div>
@@ -412,7 +412,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get all the miscellaneous dimension names. </p>
-<dl class="section return"><dt>Returns</dt><dd>List of all dimension names used in the solution that are not step or domain dimensions. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>List of all dimension names that were either Defined by <a class="el" href="classyask_1_1yc__node__factory.html#a8d1db4e2ced1916ea0e362dd8030fae8" title="Create a new miscellaneous index. ">yc_node_factory::new_misc_index()</a> and used in one or more grids, or Created at run-time by adding a new dimension via <a class="el" href="classyask_1_1yk__solution.html#ac40302135611353f57b626d4ff55af25" title="[Advanced] Add a new grid to the solution. ">yk_solution::new_grid()</a> or yk_solution::new_fixed_grid(). </dd></dl>
 
 </div>
 </div>
@@ -703,7 +703,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the number of grids in the solution. </p>
-<p>Grids may be pre-defined by the stencil compiler (e.g., via <a class="el" href="classyask_1_1yc__solution.html#a6d009c433e6d6501821ae01d37897802" title="Create an n-dimensional grid variable in the solution. ">yc_solution::new_grid()</a>) or created explicitly via <a class="el" href="classyask_1_1yk__solution.html#ac40302135611353f57b626d4ff55af25" title="[Advanced] Add a new grid to the solution. ">yk_solution::new_grid()</a>. </p><dl class="section return"><dt>Returns</dt><dd>Number of grids that have been created. </dd></dl>
+<p>Grids may be pre-defined by the stencil compiler (e.g., via <a class="el" href="classyask_1_1yc__solution.html#a6d009c433e6d6501821ae01d37897802" title="Create an n-dimensional grid variable in the solution. ">yc_solution::new_grid()</a>) or created explicitly via <a class="el" href="classyask_1_1yk__solution.html#ac40302135611353f57b626d4ff55af25" title="[Advanced] Add a new grid to the solution. ">yk_solution::new_grid()</a> or yk_solution::new_fixed_grid(). </p><dl class="section return"><dt>Returns</dt><dd>Number of grids that have been created. </dd></dl>
 
 </div>
 </div>
