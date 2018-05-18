@@ -111,15 +111,18 @@ Inheritance diagram for yask::yask_exception:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a3d93d64e68bb932f85e19124a99d8fad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d93d64e68bb932f85e19124a99d8fad"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>yask_exception</b> (const std::string &amp;message)</td></tr>
+<tr class="separator:a3d93d64e68bb932f85e19124a99d8fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18dbca3d6feb80c1d99cb187a372abe1"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yask__exception.html#a18dbca3d6feb80c1d99cb187a372abe1">what</a> () noexcept</td></tr>
 <tr class="memdesc:a18dbca3d6feb80c1d99cb187a372abe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get default message.  <a href="#a18dbca3d6feb80c1d99cb187a372abe1">More...</a><br /></td></tr>
 <tr class="separator:a18dbca3d6feb80c1d99cb187a372abe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b1b8ed888e9fbf7d232ad513b5d64d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yask__exception.html#a0b1b8ed888e9fbf7d232ad513b5d64d0">add_message</a> (std::string message)</td></tr>
-<tr class="memdesc:a0b1b8ed888e9fbf7d232ad513b5d64d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add additional message to this exception.  <a href="#a0b1b8ed888e9fbf7d232ad513b5d64d0">More...</a><br /></td></tr>
-<tr class="separator:a0b1b8ed888e9fbf7d232ad513b5d64d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49532c8e8d0d62205ad75e656bc89866"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yask__exception.html#a49532c8e8d0d62205ad75e656bc89866">get_message</a> ()</td></tr>
-<tr class="memdesc:a49532c8e8d0d62205ad75e656bc89866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get additional message.  <a href="#a49532c8e8d0d62205ad75e656bc89866">More...</a><br /></td></tr>
-<tr class="separator:a49532c8e8d0d62205ad75e656bc89866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc960116a771c0c11587deea1f4ca32f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yask__exception.html#acc960116a771c0c11587deea1f4ca32f">add_message</a> (const std::string &amp;message)</td></tr>
+<tr class="memdesc:acc960116a771c0c11587deea1f4ca32f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add additional message to this exception.  <a href="#acc960116a771c0c11587deea1f4ca32f">More...</a><br /></td></tr>
+<tr class="separator:acc960116a771c0c11587deea1f4ca32f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab964197d0769b9b58c950b19aec076c9"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yask__exception.html#ab964197d0769b9b58c950b19aec076c9">get_message</a> () const </td></tr>
+<tr class="memdesc:ab964197d0769b9b58c950b19aec076c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get additional message.  <a href="#ab964197d0769b9b58c950b19aec076c9">More...</a><br /></td></tr>
+<tr class="separator:ab964197d0769b9b58c950b19aec076c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Exception from yask framework. </p>
@@ -151,14 +154,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0b1b8ed888e9fbf7d232ad513b5d64d0"></a>
+<a class="anchor" id="acc960116a771c0c11587deea1f4ca32f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void yask::yask_exception::add_message </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>message</em></td><td>)</td>
           <td></td>
         </tr>
@@ -175,7 +178,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a49532c8e8d0d62205ad75e656bc89866"></a>
+<a class="anchor" id="ab964197d0769b9b58c950b19aec076c9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -183,7 +186,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">const char* yask::yask_exception::get_message </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
