@@ -178,9 +178,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab2755703f0d90aa4e3ef36093a1976f5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__yk.html#ga12d1d46aeb01bd7509a8dc3251657f75">yk_stats_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yk__solution.html#ab2755703f0d90aa4e3ef36093a1976f5">get_stats</a> ()=0</td></tr>
 <tr class="memdesc:ab2755703f0d90aa4e3ef36093a1976f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get performance statistics associated with preceding calls to <a class="el" href="classyask_1_1yk__solution.html#a14cc5625fc524fe8eb8d3cedc66778aa" title="Run the stencil solution for the specified steps. ">run_solution()</a>.  <a href="#ab2755703f0d90aa4e3ef36093a1976f5">More...</a><br /></td></tr>
 <tr class="separator:ab2755703f0d90aa4e3ef36093a1976f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09f2f773e4e8d63c6d1f3b6486bd08bf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yk__solution.html#a09f2f773e4e8d63c6d1f3b6486bd08bf">is_auto_tuner_enabled</a> ()=0</td></tr>
-<tr class="memdesc:a09f2f773e4e8d63c6d1f3b6486bd08bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the auto-tuner is enabled on this rank.  <a href="#a09f2f773e4e8d63c6d1f3b6486bd08bf">More...</a><br /></td></tr>
-<tr class="separator:a09f2f773e4e8d63c6d1f3b6486bd08bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a150bb5f7d351afd9b64744f32fea4f5c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yk__solution.html#a150bb5f7d351afd9b64744f32fea4f5c">is_auto_tuner_enabled</a> () const  =0</td></tr>
+<tr class="memdesc:a150bb5f7d351afd9b64744f32fea4f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the auto-tuner is enabled on this rank.  <a href="#a150bb5f7d351afd9b64744f32fea4f5c">More...</a><br /></td></tr>
+<tr class="separator:a150bb5f7d351afd9b64744f32fea4f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a923afb4530ef5f0370f8bf55856fa040"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yk__solution.html#a923afb4530ef5f0370f8bf55856fa040">set_region_size</a> (const std::string &amp;dim, <a class="el" href="group__yask.html#ga3820f8c6b5f6a92c0df31746b7d2891b">idx_t</a> size)=0</td></tr>
 <tr class="memdesc:a923afb4530ef5f0370f8bf55856fa040"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>[Advanced]</b> Set the region size in the given dimension.  <a href="#a923afb4530ef5f0370f8bf55856fa040">More...</a><br /></td></tr>
 <tr class="separator:a923afb4530ef5f0370f8bf55856fa040"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1053,7 +1053,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a09f2f773e4e8d63c6d1f3b6486bd08bf"></a>
+<a class="anchor" id="a150bb5f7d351afd9b64744f32fea4f5c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1064,7 +1064,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual bool yask::yk_solution::is_auto_tuner_enabled </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
