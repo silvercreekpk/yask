@@ -167,7 +167,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create an object to hold environment information. </p>
-<p>Initializes MPI if MPI is enabled. Environment info is kept in a separate object to factilitate initializing the environment before creating a solution and sharing an environment among multiple solutions. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to new env object. </dd></dl>
+<p>Performs the following initialization steps:</p><ul>
+<li>Initializes MPI if MPI is enabled but not yet initialized. Does not initialize MPI if MPI is not enabled or already initialized. If MPI is enabled, uses <code>MPI_COMM_WORLD</code> as the communicator.</li>
+<li>Sets flush-to-zero (FTZ) and denormals-are-zero (DAZ) floating-point controls.</li>
+<li>Enables "hot teams" mode for Intel OpenMP. Initializes OpenMP library if it is not already started. If it is already started, note that the "hot teams" mode may not get set correctly. This mode is important for optimal performance of nested OpenMP regions (used when the number of threads per block is greater than one).</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>If you initialize MPI before calling this function, you should call <code>MPI_Init_thread(..., MPI_THREAD_SERIALIZED, ...)</code> or <code>MPI_Init_thread(..., MPI_THREAD_MULTIPLE, ...)</code>.</dd>
+<dd>
+If you initialize OpenMP (by calling any OpenMP function) before calling this function, set the following environment variables prior to initializing OpenMP: <code>KMP_HOT_TEAMS_MODE=</code> and <code>KMP_HOT_TEAMS_MAX_LEVEL=2</code>.</dd></dl>
+<p>Environment info is kept in a separate object to factilitate initializing the environment before creating a solution and sharing an environment among multiple solutions. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to new env object. </dd></dl>
 
 </div>
 </div>
