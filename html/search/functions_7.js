@@ -5,7 +5,7 @@ var searchData=
   ['new_5fconst_5fnumber_5fnode',['new_const_number_node',['../classyask_1_1yc__node__factory.html#ad2fda22e63ea36d777d550a805642a8e',1,'yask::yc_node_factory::new_const_number_node(double val)'],['../classyask_1_1yc__node__factory.html#a2c09961e1c61f2be17fe5a0286d9bfc6',1,'yask::yc_node_factory::new_const_number_node(idx_t val)']]],
   ['new_5fdivide_5fnode',['new_divide_node',['../classyask_1_1yc__node__factory.html#ab999cc90360e73c739219a69fab2b57d',1,'yask::yc_node_factory']]],
   ['new_5fdomain_5findex',['new_domain_index',['../classyask_1_1yc__node__factory.html#a7c47726eb7de2b9cd174cfcff7745699',1,'yask::yc_node_factory']]],
-  ['new_5fenv',['new_env',['../classyask_1_1yk__factory.html#a7eed1ca2e79b5edb76f2cafb57cad459',1,'yask::yk_factory']]],
+  ['new_5fenv',['new_env',['../classyask_1_1yk__factory.html#a7eed1ca2e79b5edb76f2cafb57cad459',1,'yask::yk_factory::new_env() const '],['../classyask_1_1yk__factory.html#a6714bd7b1bc1b849fa0a6a051cd8d079',1,'yask::yk_factory::new_env(MPI_Comm comm) const ']]],
   ['new_5fequals_5fnode',['new_equals_node',['../classyask_1_1yc__node__factory.html#a3174d90796b1c2ba843ac6c29a93dcc3',1,'yask::yc_node_factory']]],
   ['new_5fequation_5fnode',['new_equation_node',['../classyask_1_1yc__node__factory.html#a1da71b89d7fe25beeb044eb61f9efe0c',1,'yask::yc_node_factory']]],
   ['new_5ffile_5foutput',['new_file_output',['../classyask_1_1yask__output__factory.html#a93e4a9517f987048f8f7301388c255eb',1,'yask::yask_output_factory']]],

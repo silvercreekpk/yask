@@ -4,6 +4,7 @@ var searchData=
   ['yask_5fcommon_5fapi_2ehpp',['yask_common_api.hpp',['../yask__common__api_8hpp.html',1,'']]],
   ['yask_5fcompiler_5fapi_2ehpp',['yask_compiler_api.hpp',['../yask__compiler__api_8hpp.html',1,'']]],
   ['yask_5fexception',['yask_exception',['../classyask_1_1yask__exception.html',1,'yask']]],
+  ['yask_5fexception',['yask_exception',['../classyask_1_1yask__exception.html#a0d43c543951311f4184d175476b10b5c',1,'yask::yask_exception::yask_exception()'],['../classyask_1_1yask__exception.html#a3d93d64e68bb932f85e19124a99d8fad',1,'yask::yask_exception::yask_exception(const std::string &amp;message)']]],
   ['yask_5ffile_5foutput',['yask_file_output',['../classyask_1_1yask__file__output.html',1,'yask']]],
   ['yask_5ffile_5foutput_5fptr',['yask_file_output_ptr',['../group__yask.html#ga44ad5ed6fe36f3ef3ebee7a077a12149',1,'yask']]],
   ['yask_5fget_5fversion_5fstring',['yask_get_version_string',['../group__yask.html#ga8705b764227c5d6f7cf029d90a6b7ab4',1,'yask']]],

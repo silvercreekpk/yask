@@ -109,6 +109,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7eed1ca2e79b5edb76f2cafb57cad459"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__yk.html#ga8dc62f5599d5c5eb9f7583d7d6a63df1">yk_env_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yk__factory.html#a7eed1ca2e79b5edb76f2cafb57cad459">new_env</a> () const </td></tr>
 <tr class="memdesc:a7eed1ca2e79b5edb76f2cafb57cad459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an object to hold environment information.  <a href="#a7eed1ca2e79b5edb76f2cafb57cad459">More...</a><br /></td></tr>
 <tr class="separator:a7eed1ca2e79b5edb76f2cafb57cad459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6714bd7b1bc1b849fa0a6a051cd8d079"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__yk.html#ga8dc62f5599d5c5eb9f7583d7d6a63df1">yk_env_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yk__factory.html#a6714bd7b1bc1b849fa0a6a051cd8d079">new_env</a> (MPI_Comm comm) const </td></tr>
+<tr class="memdesc:a6714bd7b1bc1b849fa0a6a051cd8d079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classyask_1_1yk__env.html">yk_env</a> object using the provided MPI communicator.  <a href="#a6714bd7b1bc1b849fa0a6a051cd8d079">More...</a><br /></td></tr>
+<tr class="separator:a6714bd7b1bc1b849fa0a6a051cd8d079"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab882536b5dc6c9c5142aede57fd83155"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__yk.html#ga2debaa7135bb46dfc295ca623bee2876">yk_solution_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yk__factory.html#ab882536b5dc6c9c5142aede57fd83155">new_solution</a> (<a class="el" href="group__yk.html#ga8dc62f5599d5c5eb9f7583d7d6a63df1">yk_env_ptr</a> env) const </td></tr>
 <tr class="memdesc:ab882536b5dc6c9c5142aede57fd83155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a stencil solution.  <a href="#ab882536b5dc6c9c5142aede57fd83155">More...</a><br /></td></tr>
 <tr class="separator:ab882536b5dc6c9c5142aede57fd83155"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +179,34 @@ Public Member Functions</h2></td></tr>
 <dd>
 If you initialize OpenMP (by calling any OpenMP function) before calling this function, set the following environment variables prior to initializing OpenMP: <code>KMP_HOT_TEAMS_MODE=</code> and <code>KMP_HOT_TEAMS_MAX_LEVEL=2</code>.</dd></dl>
 <p>Environment info is kept in a separate object to factilitate initializing the environment before creating a solution and sharing an environment among multiple solutions. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to new env object. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6714bd7b1bc1b849fa0a6a051cd8d079"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__yk.html#ga8dc62f5599d5c5eb9f7583d7d6a63df1">yk_env_ptr</a> yask::yk_factory::new_env </td>
+          <td>(</td>
+          <td class="paramtype">MPI_Comm&#160;</td>
+          <td class="paramname"><em>comm</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a <a class="el" href="classyask_1_1yk__env.html">yk_env</a> object using the provided MPI communicator. </p>
+<p>Behaves like <a class="el" href="classyask_1_1yk__factory.html#a7eed1ca2e79b5edb76f2cafb57cad459" title="Create an object to hold environment information. ">new_env()</a>, but uses the provided MPI communicator instead of using <code>MPI_COMM_WORLD</code>. MPI must be enabled and initialized before calling this function following the usage notes for <a class="el" href="classyask_1_1yk__factory.html#a7eed1ca2e79b5edb76f2cafb57cad459" title="Create an object to hold environment information. ">new_env()</a>.</p>
+<dl class="section note"><dt>Note</dt><dd><code>#include "mpi.h"</code> should precede <code>#include "yask_kernel_api.hpp"</code> to ensure proper MPI type definitions. </dd></dl>
 
 </div>
 </div>

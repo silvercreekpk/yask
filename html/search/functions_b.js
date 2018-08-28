@@ -22,6 +22,7 @@ var searchData=
   ['set_5fnum_5franks',['set_num_ranks',['../classyask_1_1yk__solution.html#ac4cd27d412b6fe013db58b167999a362',1,'yask::yk_solution']]],
   ['set_5fnuma_5fpreferred',['set_numa_preferred',['../classyask_1_1yk__grid.html#a76951eeaa5081676dde0ab9e6f57433a',1,'yask::yk_grid']]],
   ['set_5frank_5fdomain_5fsize',['set_rank_domain_size',['../classyask_1_1yk__solution.html#a155d8f4a38da9da11488a18cca50bae8',1,'yask::yk_solution']]],
+  ['set_5frank_5findex',['set_rank_index',['../classyask_1_1yk__solution.html#ac0eccaa1d228d7f3408e3c2b0881f279',1,'yask::yk_solution']]],
   ['set_5fregion_5fsize',['set_region_size',['../classyask_1_1yk__solution.html#a923afb4530ef5f0370f8bf55856fa040',1,'yask::yk_solution']]],
   ['set_5fright_5fhalo_5fsize',['set_right_halo_size',['../classyask_1_1yk__grid.html#aa47ac53814983d98603279bcab57ad3d',1,'yask::yk_grid']]],
   ['set_5fright_5fmin_5fpad_5fsize',['set_right_min_pad_size',['../classyask_1_1yk__grid.html#a33e38a33f098cc29c50abfe8dcfe0c38',1,'yask::yk_grid']]],

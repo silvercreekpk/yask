@@ -142,6 +142,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a749f383c04f922fbc8fa603164760bba"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__yask.html#ga3820f8c6b5f6a92c0df31746b7d2891b">idx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yk__solution.html#a749f383c04f922fbc8fa603164760bba">get_num_ranks</a> (const std::string &amp;dim) const  =0</td></tr>
 <tr class="memdesc:a749f383c04f922fbc8fa603164760bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of MPI ranks in the given dimension.  <a href="#a749f383c04f922fbc8fa603164760bba">More...</a><br /></td></tr>
 <tr class="separator:a749f383c04f922fbc8fa603164760bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0eccaa1d228d7f3408e3c2b0881f279"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yk__solution.html#ac0eccaa1d228d7f3408e3c2b0881f279">set_rank_index</a> (const std::string &amp;dim, <a class="el" href="group__yask.html#ga3820f8c6b5f6a92c0df31746b7d2891b">idx_t</a> num)=0</td></tr>
+<tr class="memdesc:ac0eccaa1d228d7f3408e3c2b0881f279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the rank index in the specified dimension.  <a href="#ac0eccaa1d228d7f3408e3c2b0881f279">More...</a><br /></td></tr>
+<tr class="separator:ac0eccaa1d228d7f3408e3c2b0881f279"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d3074305ff8b70c3a8171f22a609082"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__yask.html#ga3820f8c6b5f6a92c0df31746b7d2891b">idx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classyask_1_1yk__solution.html#a0d3074305ff8b70c3a8171f22a609082">get_rank_index</a> (const std::string &amp;dim) const  =0</td></tr>
 <tr class="memdesc:a0d3074305ff8b70c3a8171f22a609082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rank index in the specified dimension.  <a href="#a0d3074305ff8b70c3a8171f22a609082">More...</a><br /></td></tr>
 <tr class="separator:a0d3074305ff8b70c3a8171f22a609082"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -604,7 +607,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set the number of MPI ranks in the given dimension. </p>
-<p>The <em>product</em> of the number of ranks across all dimensions must equal <a class="el" href="classyask_1_1yk__env.html#af58a148c4391d15701c514429441167d" title="Get number of MPI ranks. ">yk_env::get_num_ranks()</a>. The curent MPI rank will be assigned a unique location within the overall problem domain based on its MPI rank index. The same number of MPI ranks must be set via this API on each constituent MPI rank to ensure a consistent overall configuration. The number of ranks in each dimension must be properly set before calling <a class="el" href="classyask_1_1yk__solution.html#aa0edfde033c251e3f8d2d184a682d4cb" title="Prepare the solution for stencil application. ">yk_solution::prepare_solution()</a>. There is no rank setting allowed in the solution-step dimension (usually "t"). </p>
+<p>The <em>product</em> of the number of ranks across all dimensions must equal <a class="el" href="classyask_1_1yk__env.html#af58a148c4391d15701c514429441167d" title="Get number of MPI ranks. ">yk_env::get_num_ranks()</a>. The curent MPI rank will be assigned a unique location within the overall problem domain based on its MPI rank index. Or, you can set it explicitly via <a class="el" href="classyask_1_1yk__solution.html#ac0eccaa1d228d7f3408e3c2b0881f279" title="Set the rank index in the specified dimension. ">set_rank_index()</a>.</p>
+<p>The same number of MPI ranks must be set via this API on each constituent MPI rank to ensure a consistent overall configuration. The number of ranks in each dimension must be properly set before calling <a class="el" href="classyask_1_1yk__solution.html#aa0edfde033c251e3f8d2d184a682d4cb" title="Prepare the solution for stencil application. ">yk_solution::prepare_solution()</a>. There is no rank setting allowed in the solution-step dimension (usually "t") or in a misc dimension.</p>
+<p>In fact, a practical definition of a domain dimension is one that is decomposable across MPI ranks. Specifically, a domain dimension does not have to correspond to a spatial dimension in the physical problem description. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dim</td><td>Name of dimension to set. Must be one of the names from <a class="el" href="classyask_1_1yk__solution.html#a163d10690a6b636b2929e9a82ac2737b" title="Get all the domain dimension names. ">get_domain_dim_names()</a>. </td></tr>
@@ -648,6 +653,60 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac0eccaa1d228d7f3408e3c2b0881f279"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void yask::yk_solution::set_rank_index </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__yask.html#ga3820f8c6b5f6a92c0df31746b7d2891b">idx_t</a>&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the rank index in the specified dimension. </p>
+<p>The overall rank index in the specified dimension must range from zero (0) to <a class="el" href="classyask_1_1yk__solution.html#a749f383c04f922fbc8fa603164760bba" title="Get the number of MPI ranks in the given dimension. ">get_num_ranks()</a> - 1, inclusive. If you do not call <a class="el" href="classyask_1_1yk__solution.html#ac0eccaa1d228d7f3408e3c2b0881f279" title="Set the rank index in the specified dimension. ">set_rank_index()</a>, a rank index will be assigned when <a class="el" href="classyask_1_1yk__solution.html#aa0edfde033c251e3f8d2d184a682d4cb" title="Prepare the solution for stencil application. ">prepare_solution()</a> is called. You should either call <a class="el" href="classyask_1_1yk__solution.html#ac0eccaa1d228d7f3408e3c2b0881f279" title="Set the rank index in the specified dimension. ">set_rank_index()</a> on all ranks or allow YASK to assign on on all ranks, i.e., do not mix-and-match.</p>
+<p>Example using 6 MPI ranks in a 2-by-3 x, y domain:</p>
+<table class="doxtable">
+<tr>
+<td>MPI rank index = 0, x rank index = 0, y rank index = 0 </td><td>MPI rank index = 1, x rank index = 1, y rank index = 0 </td></tr>
+<tr>
+<td>MPI rank index = 2, x rank index = 0, y rank index = 1 </td><td>MPI rank index = 3, x rank index = 1, y rank index = 1 </td></tr>
+<tr>
+<td>MPI rank index = 4, x rank index = 0, y rank index = 2 </td><td>MPI rank index = 5, x rank index = 1, y rank index = 2 </td></tr>
+</table>
+<p>See <a class="el" href="classyask_1_1yk__env.html#af58a148c4391d15701c514429441167d" title="Get number of MPI ranks. ">yk_env::get_num_ranks()</a> and <a class="el" href="classyask_1_1yk__env.html#ac8c30cd14477384b62de2bf88644482f" title="Get MPI rank index. ">yk_env::get_rank_index()</a> for MPI rank index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dim</td><td>Name of dimension to set. Must be one of the names from <a class="el" href="classyask_1_1yk__solution.html#a163d10690a6b636b2929e9a82ac2737b" title="Get all the domain dimension names. ">get_domain_dim_names()</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>Rank index in <code>dim</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a0d3074305ff8b70c3a8171f22a609082"></a>
 <div class="memitem">
 <div class="memproto">
@@ -671,7 +730,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the rank index in the specified dimension. </p>
-<p>The overall rank indices in the specified dimension will range from zero (0) to <a class="el" href="classyask_1_1yk__solution.html#a749f383c04f922fbc8fa603164760bba" title="Get the number of MPI ranks in the given dimension. ">get_num_ranks()</a> - 1, inclusive. </p><dl class="section return"><dt>Returns</dt><dd>Zero-based index of this rank. </dd></dl>
+<p>The overall rank index in the specified dimension will range from zero (0) to <a class="el" href="classyask_1_1yk__solution.html#a749f383c04f922fbc8fa603164760bba" title="Get the number of MPI ranks in the given dimension. ">get_num_ranks()</a> - 1, inclusive. </p><dl class="section return"><dt>Returns</dt><dd>Zero-based index of this rank. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dim</td><td>Name of dimension to get. Must be one of the names from <a class="el" href="classyask_1_1yk__solution.html#a163d10690a6b636b2929e9a82ac2737b" title="Get all the domain dimension names. ">get_domain_dim_names()</a>. </td></tr>
